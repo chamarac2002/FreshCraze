@@ -1,0 +1,63 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="Styles/updateStyle.css">
+</head>
+
+<body>
+
+<img src="images\logo.png" class="logo" >
+
+<a href="profile.jsp">
+<img src="images\user.png" class="user">
+</a>
+
+    <h1 class="logo_topic">FreshCraze</h1>
+
+    <nav class="navbar">
+        <a href="HomePageAL.jsp">Home</a>
+        <a href="HomePage.jsp">Logout</a>
+        <a href="link">Feedback</a>
+        <span></span>
+    </nav>
+
+<hr class="topic_line">
+
+	<% 
+		String id = request.getParameter("id");
+		String name = request.getParameter("name");
+		String address = request.getParameter("address");
+		String phone = request.getParameter("phone");
+		String nic = request.getParameter("nic");
+		String email = request.getParameter("email");
+		String gender = request.getParameter("gender");
+		String password = request.getParameter("pass");
+	%>
+	
+	<form action="update" method="post">
+		Customer ID <input type="text" name="id" value="<%= id %>" readonly><br><br>
+		Name <input type="text" name="name" value="<%= name %>"><br><br>
+		Address <input type="text" name="address" value="<%= address %>"><br><br>
+		Phone Number <input type="tel" name="phone" value="<%= phone %>"><br><br>
+		NIC Number <input type="text" name="nic" value="<%= nic %>"><br><br>
+		Email <input type="email" name="email" value="<%= email %>"><br><br>
+		Gender <select name = "gender" >
+					<option value = "Male">Male</option>
+					<option value = "Female">Female</option>
+					<option value = "Other">Other</option>
+				</select><br><br>
+		Password <input type="password" name="pass" value="<%= password %>"><br><br><br>
+		
+		<input type="submit" name="submit" value="Update">
+	</form>
+	
+	
+</body>
+</html>

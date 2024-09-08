@@ -1,0 +1,56 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="Styles/HomePageStyle.css">
+</head>
+
+<body>
+
+<img src="images\logo.png" class="logo" >
+
+    <h1 class="logo_topic">FreshCraze</h1>
+
+    <nav class="navbar">
+        <a href="home page.html">Home</a>
+        <a href="Login page.html">Login</a>
+        <a href="customer registration.html">Register</a>
+        <span></span>
+    </nav>
+
+<hr class="topic_line">
+
+	<form action="login" method="post">
+		Email <input type="text" name="email" placeholder="Enter your email"><br><br>
+		
+		Password <input type="password" name="password" placeholder="Enter your email password"><br><br><br>
+	       
+	 	<input type="submit" name="submit" value="Login">
+     </form>  
+</body>
+</html>
+
+
+
+<div class="container">
+    <h2>Login</h2>
+    <form action="login" method="post">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your email password" required>
+      </div>
+      <div class="form-group">
+        <input type="submit" name="submit" value="Login">
+      </div>
+    </form>
+  </div>
